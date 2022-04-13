@@ -1,0 +1,114 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "film 1",
+      "description": "film 1 Lorem ipsum",
+      "imgUrl": "1.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "film 2",
+      "description": "film 2 Lorem ipsum",
+      "imgUrl": "2.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "film 3",
+      "description": "film 3 Lorem ipsum",
+      "imgUrl": "3.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 4,
+      "title": "film 4",
+      "description": "film 4 Lorem ipsum",
+      "imgUrl": "4.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 5,
+      "title": "Deneme",
+      "description": "sdfg",
+      "imgUrl": "1.jpg",
+      "isPopular": false,
+      "datePublished": 1642626215169,
+      "categoryId": "1"
+    },
+    {
+      "id": 6,
+      "title": "Deneme2",
+      "description": "lorem",
+      "imgUrl": "3.jpg",
+      "isPopular": false,
+      "datePublished": 1642626263428,
+      "categoryId": "4"
+    },
+    {
+      "id": 7,
+      "title": "Deneme",
+      "description": "vvxb",
+      "imgUrl": "sg",
+      "isPopular": false,
+      "datePublished": 1642626366696,
+      "categoryId": "2"
+    },
+    {
+      "id": 8,
+      "title": "Deneme",
+      "description": "drhfj",
+      "imgUrl": "1.jpg",
+      "isPopular": false,
+      "datePublished": 1642628586733,
+      "categoryId": "3"
+    },
+    {
+      "id": 9,
+      "title": "Zehra kozmetik",
+      "description": "sgdh",
+      "imgUrl": "1.jpg",
+      "isPopular": false,
+      "datePublished": 1642629108128,
+      "categoryId": "4"
+    },
+    {
+      "id": 10,
+      "title": "xfd",
+      "description": "fdg",
+      "imgUrl": "1.jpeg",
+      "isPopular": false,
+      "datePublished": 1642669750896,
+      "categoryId": "1"
+    },
+    [],
+    {
+      "id": 11,
+      "title": "Yeni Başlık",
+      "description": "Yeni Açıklama",
+      "imgUrl": "1.jpg",
+      "isPopular": false,
+      "datePublished": 1643755294247,
+      "categoryId": "1"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "macera"
+    },
+    {
+      "id": 2,
+      "name": "romantik"
+    },
+    {
+      "id": 3,
+      "name": "bilim kurgu"
+    },
+    {
+      "id": 4,
+      "name": "komedi"
+    }
+  ]
+}

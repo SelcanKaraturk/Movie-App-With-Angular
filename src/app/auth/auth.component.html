@@ -1,0 +1,17 @@
+<!--<div *ngIf="error" class="alert alert-danger">{{error}}</div>-->
+<app-alert *ngIf="error" [message]="error" (close)="closeModel($event)"></app-alert>
+<form #authForm ="ngForm" (ngSubmit) = "onSubmit(authForm)">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" ngModel required name="email" id="email" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" ngModel required minlength="6" name="password" id="password" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-success me-4" [disabled]="authForm.invalid">{{isLogin? 'Login': 'Register'}}</button>
+  <button type="button" class="btn btn-success" (click)="changeLogin()">Toggle Class</button>
+</form>
+

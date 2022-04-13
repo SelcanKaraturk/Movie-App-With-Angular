@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="movieForm" (ngSubmit)="createMovie()">
+      <div class="col-12 mt-3">
+        <label for="title" class="">Başlık: </label>
+        <input class="form-control" formControlName="title"
+                name="title" id="title" type="text">
+        <div class="alert alert-danger" *ngIf="inputForm('title').invalid && inputForm('title').touched">
+        <small class="text-danger" *ngIf="inputForm('title').errors.required">Bu alan gereklidir</small>
+        <small class="text-danger" *ngIf="inputForm('title').errors.minlength">En az 5 karakter girilmelidir</small>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <label for="description">Açıklama</label>
+        <textarea class="form-control" name="description" formControlName="description" id="description"></textarea>
+        <small class="text-danger" *ngIf="inputForm('description').invalid && inputForm('description').touched">Bu alanın doldurulması zorunludur.</small>
+      </div>
+      <div class="col-12 mt-3">
+        <label for="imgUrl">Resim Url</label>
+        <input class="form-control" name="imgUrl" id="imgUrl" formControlName="imgUrl" type="text">
+        <div class="alert alert-danger" *ngIf="inputForm('imgUrl').invalid && inputForm('imgUrl').touched">
+          <small class="text-danger" *ngIf="inputForm('imgUrl').errors.required">Bu alanın doldurulması zorunludur</small>
+          <small class="text-danger" *ngIf="inputForm('imgUrl').errors.wrongExtension">Lütfen dosya uzantısını kontrol ediniz.</small>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <label for="category">Category</label>
+        <select name="categoryId" id="category" formControlName="categoryId" class="form-control">
+          <option value="">Seçiniz</option>
+          <option *ngFor="let item of categories" [value]="item.id">
+            {{item.name}}
+          </option>
+        </select>
+        <small class="text-danger" *ngIf="inputForm('categoryId').invalid && inputForm('categoryId').touched">Bu alanın doldurulması zorunludur.</small>
+      </div>
+      <div class="col-12 mt-3 text-center">
+        <button type="submit" [disabled]="movieForm.invalid" class="btn btn-success">Add</button>
+        <button  class="btn btn-danger ms-4" (click)="clearForm()">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>
